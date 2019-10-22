@@ -19,9 +19,9 @@ const createType = (typeData) => {
     return TypeCollection.create(typeData)
 }
 
-const updateType = (id, typeData) => {
-    return TypeCollection.updateOne({_id: id}, typeData)
-}
+// const updateType = (id, typeData) => {
+//     return TypeCollection.updateOne({_id: id}, typeData)
+// }
 
 const deleteType = (id) => {
     return TypeCollection.deleteOne({_id: id})

@@ -23,12 +23,12 @@ typeRouter.post('/type', (req, res) => {
     })
 })
 
-typeRouter.put('/type/:id', (req, res) => {
-    typeApi.updateType(req.params.id, req.body)
-    .then((updatedType) => {
-        res.json(updatedType)
-    })
-})
+// typeRouter.put('/type/:id', (req, res) => {
+//     typeApi.updateType(req.params.id, req.body)
+//     .then((updatedType) => {
+//         res.json(updatedType)
+//     })
+// })
 
 typeRouter.delete('/type/:id', (req, res) => {
     typeApi.deleteType(req.params.id)
