@@ -32,6 +32,6 @@ module.exports = {
     getAllType,
     getSingleType,
     createType,
-    updateType,
+    // updateType,
     deleteType
 }
