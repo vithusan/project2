@@ -4,7 +4,7 @@ const methodOverride = require('method-override')
 
 const { typeRouter } = require('./controllers/type.js')
 const { carRouter } = require('./controllers/car.js')
-// const { eventRouter } = require('./controllers/event.js')
+const { eventRouter } = require('./controllers/event.js')
 
 
 app.use(express.urlencoded({extended: true}))
@@ -19,7 +19,7 @@ app.set('view engine', 'hbs')
 
 app.use('/', typeRouter)
 app.use('/', carRouter)
-// app.use('/', eventRouter)
+app.use('/', eventRouter)
 
 const PORT = process.env.PORT || 3000 
 
