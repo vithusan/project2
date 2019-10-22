@@ -1,0 +1,12 @@
+<h1>{{singleEvent.name}}</h1>
+
+<p>{{singleEvent.date}}</p>
+<p>{{singleEvent.location}}</p>
+
+<button><a href="/event/edit/{{singleEvent._id}}">Update</a></button>
+
+<form action="/event/{{singleEvent._id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete"/>
+</form>
+
+<button><a href="/event">Home</a></button>

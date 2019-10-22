@@ -4,15 +4,19 @@ const CarSchema = new mongoose.Schema({
     make: String,
     model: String,
     year: Number,
-    type: String,
     transmission: String,
-    description: String
+    description: String,
+    typeId: mongoose.Types.ObjectId
 })
 
 const CarCollection = mongoose.model('CarSchema', CarSchema)
 
 const getAllCar = () => {
     return CarCollection.find({})
+}
+
+const getAllCarByType = (typeId) => {
+    return CarCollection.find({typeId: typeId})
 }
 
 const getSingleCar = (id) => {
@@ -33,6 +37,7 @@ const deleteCar = (id) => {
 
 module.exports = {
     getAllCar,
+    getAllCarByType,
     getSingleCar,
     createCar,
     updateCar,

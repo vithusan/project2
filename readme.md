@@ -6,3 +6,7 @@
 !['Wireframe 2'](/img/wireframe2.jpg)
 !['Wireframe 3'](/img/wireframe3.jpg)
 !['Wireframe 4'](/img/wireframe4.jpg)
+
+
+Director is type 
+movie is cars and events

@@ -1,5 +1,6 @@
 const express = require('express')
 const typeApi = require('../models/type.js')
+const carApi = require('../models/car.js')
 const typeRouter = express.Router()
 
 
@@ -22,7 +23,11 @@ typeRouter.get('/type/:id', (req, res) => {
     typeApi.getSingleType(req.params.id)
     .then((singleType) => {
         // res.json(singleType)
-        res.render('type/singleType', {singleType})
+        // res.render('type/singleType', {singleType})
+        carApi.getAllCarByType(req.params.id)
+        .then((typeCar) => {
+            res.render('type/singleType', {singleType, typeCar})
+        })
     })
     .catch((error) => {
         res.json(error)

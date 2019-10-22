@@ -1,0 +1,10 @@
+<h1>{{updateSingleEvent.name}}</h1>
+
+<form action="/event/{{updateSingleEvent._id}}?_method=PUT" method="POST">
+    <input type="text" placeholder="Name" name="name" value="{{updateSingleEvent.name}}"/>
+    <input type="Date" placeholder="Date" name="date" value="{{updateSingleEvent.date}}"/>
+    <input type="text" placeholder="Location" name="location" value="{{updateSingleEvent.location}}"/>
+    <input type="submit" value="Add"/>
+</form>
+
+<button><a href="/event">Home</a></button>

@@ -1,10 +1,9 @@
-<h1>{{updateSingleCar.make}}{{updateSingleCar.model}}</h1>
+<h1>{{updateSingleCar.make}} {{updateSingleCar.model}}</h1>
 
 <form action="/car/{{updateSingleCar._id}}?_method=PUT" method="POST">
     <input type="text" placeholder="Make" name="make" value="{{updateSingleCar.make}}"/>
     <input type="text" placeholder="model" name="model" value="{{updateSingleCar.model}}"/>
     <input type="Number" placeholder="Year" name="year" value="{{updateSingleCar.year}}"/>
-    <input type="text" placeholder="Type" name="type" value="{{updateSingleCar.type}}"/>
     <input type="text" placeholder="Transmission" name="transmission" value="{{updateSingleCar.transmission}}"/>
     <input type="text" placeholder="Description" name="description" value="{{updateSingleCar.description}}"/>
     <input type="submit" value="Add"/>
