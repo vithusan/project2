@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
 
-const { templateRouter } = require('./controllers/template.js')
+const { typeRouter } = require('./controllers/type.js')
+// const { carRouter } = require('./controllers/car.js')
+// const { eventRouter } = require('./controllers/event.js')
 
 
 app.use(express.urlencoded({extended: true}))
@@ -15,7 +17,9 @@ app.use(express.static(__dirname+"/public"))
 
 app.set('view engine', 'hbs')
 
-app.use('/', templateRouter)
+app.use('/', typeRouter)
+// app.use('/', carRouter)
+// app.use('/', eventRouter)
 
 const PORT = process.env.PORT || 3000 
 
