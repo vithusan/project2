@@ -8,8 +8,8 @@ carRouter.get('/car/new', (req, res) => {
 
 carRouter.get('/car/edit/:id', (req, res) => {
     carApi.getSingleCar(req.params.id)
-    .then((singleCar) => {
-        res.render('car/updateCar', {singleCar})
+    .then((updateSingleCar) => {
+        res.render('car/updateCar', {updateSingleCar})
     })
 })
 carRouter.get('/car', (req, res) => {
