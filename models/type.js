@@ -2,7 +2,8 @@ const mongoose = require('./connection.js')
 
 const TypeSchema = new mongoose.Schema({
     name: String,
-    description: String
+    description: String,
+    picture: String
 })
 
 const TypeCollection = mongoose.model('TypeSchema', TypeSchema)
