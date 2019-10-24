@@ -1,23 +1,46 @@
 <h1>{{singleType.name}}</h1>
 
-<p>{{singleType.description}}</p>
+<div class="singleDiv">
+    <p class="description">{{singleType.description}}</p>
 
-<img src={{singleType.picture}} />
-
-{{#each typeCar}}
-    <p>{{make}}</p>
-{{/each}}
+    {{!-- <img src={{singleType.picture}} /> --}}
 
 <a href="/car/new/{{singleType._id}}">
-    <button>
-    Add Car for this Type
-    </button>
-</a>
+        <button class="allBtns">
+            Add Car
+        </button>
+    </a>
+    <div class="smallContainer">
+        {{#each typeCar}}
+        <a href="/car/{{_id}}">{{make}} {{model}}</a>
+        {{else}}
+        <p class="emptyList">No Cars Available</p>
+        {{/each}}
+    </div>
+
+<a href="/car/new/{{singleType._id}}">
+        <button class="allBtns">
+            Add Event
+        </button>
+    </a>
+    <div class="smallContainer">
+        {{#each typeEvent}}
+        <a href="/event/{{_id}}">{{name}}</a>
+        {{else}}
+        <p class="emptyList">No Events Available</p>
+        {{/each}}
+    </div>
 
 
-<form action="/type/{{singleType._id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete"/>
-</form>
+    
+
+    {{!-- <button class="allBtns"><a href="/type/edit/{{singleType._id}}">Update</a></button> --}}
+{{!-- 
+    <form action="/type/{{singleType._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" class="allBtns"/>
+    </form> --}}
 
 
-<button><a href="/type">Home</a></button>
+    <button class="allBtns"><a href="/type">Back</a></button>
+
+</div>

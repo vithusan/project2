@@ -4,9 +4,22 @@
     <input type="text" placeholder="Make" name="make" value="{{updateSingleCar.make}}"/>
     <input type="text" placeholder="model" name="model" value="{{updateSingleCar.model}}"/>
     <input type="Number" placeholder="Year" name="year" value="{{updateSingleCar.year}}"/>
-    <input type="text" placeholder="Transmission" name="transmission" value="{{updateSingleCar.transmission}}"/>
+    {{!-- <input type="text" placeholder="Transmission" name="transmission" value="{{updateSingleCar.transmission}}"/> --}}
+    <select name="transmission">
+        <option value="{{updateSingleCar.transmission}}">{{updateSingleCar.transmission}}</option>
+    <option value="Automatic">Automatic</option>
+  <option value="Manual">Manual</option>
+</select>
     <input type="text" placeholder="Description" name="description" value="{{updateSingleCar.description}}"/>
-    <input type="submit" value="Add"/>
+    <input type="submit" value="Save" class="allBtns"/>
 </form>
+{{!-- 
+<button class="allBtns"><a href="/car">Home</a></button> --}}
 
-<button><a href="/car">Home</a></button>
+<button onclick="goBack()" class="allBtns">Back</button>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>

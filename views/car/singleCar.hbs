@@ -1,14 +1,15 @@
-<h1>{{singleCar.make}} {{singleCar.model}}</h1>
+<h1>{{singleCar.make}}</h1>
 
+<p>{{singleCar.model}}</p>
 <p>{{singleCar.year}}</p>
 <p>{{singleCar.type}}</p>
 <p>{{singleCar.transmission}}</p>
 <p>{{singleCar.description}}</p>
 
-<button><a href="/car/edit/{{singleCar._id}}">Update</a></button>
+<button class="allBtns"><a href="/car/edit/{{singleCar._id}}">Update</a></button>
 
 <form action="/car/{{singleCar._id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete"/>
+    <input type="submit" value="Delete" class="allBtns"/>
 </form>
 
-<button><a href="/car">Home</a></button>
+<button class="allBtns"><a href="/type">Back</a></button>

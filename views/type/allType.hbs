@@ -1,16 +1,16 @@
 <div class="mainContent">
     <div class="homepageTitle">
         <img src="/assets/carfectionLogo.jpg" alt="carfection logo" class="carfectionLogo"/>
-        <h1>CAR<span>FECTION</span></h1>
+        <h1>Car<span>fection</span></h1>
     </div>
     <h2>FOR THE LOVE OF CARS</h2>
     <div class="allList">
         {{#each allType}}
-        <p class="eachType"><a href="/type/{{_id}}"><img src={{picture}}/></a></p>
+        <p class="eachType"><a href="/type/{{_id}}">{{name}}</a></p>
         {{/each}}
     </div>
 
-    <button><a href="/type/new">Add</a></button>
+    {{!-- <button><a href="/type/new">Add</a></button> --}}
 
     <a href="https://www.youtube.com/user/XCARFilms" class="youtubeLink">Youtube Channel <img src="/assets/youtubeLogo.png" alt="youtube channel" class="youtubeLogo"/></a>
 
