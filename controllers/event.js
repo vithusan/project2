@@ -6,6 +6,9 @@ eventRouter.get('/event/new', (req, res) => {
     res.render('event/createEvent')
 })
 
+eventRouter.get('/eevnt/new/:eventId', (req, res) => {
+    res.render('/event/createEvent', {eventId: req.params.eventId})
+})
 eventRouter.get('/event/edit/:id', (req, res) =>{
     eventApi.getSingleEvent(req.params.id)
     .then((updateSingleEvent) => {
@@ -33,7 +36,7 @@ eventRouter.post('/event', (req, res) => {
     eventApi.createEvent(req.body)
     .then((createdEvent) => {
         // res.json(createdEvent)
-        res.redirect('/event')
+        res.redirect(`/event/${req.params.eventId}`)
     })
 })
 

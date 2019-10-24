@@ -45,7 +45,7 @@ carRouter.put('/car/:id', (req, res) => {
     carApi.updateCar(req.params.id, req.body)
     .then((updatedCar) => {
         // res.json(updatedCar)
-        res.redirect(`/car/${req.params.id}`)
+        res.redirect(`/type`)
     })
 })
 
@@ -53,7 +53,7 @@ carRouter.delete('/car/:id' , (req, res) => {
     carApi.deleteCar(req.params.id)
     .then((deletedCar) => {
         // res.json(deletedCar)
-        res.redirect('/car')
+        res.redirect(`/type`)
     })
 })
 

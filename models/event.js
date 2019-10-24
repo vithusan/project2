@@ -3,13 +3,18 @@ const mongoose = require('./connection.js')
 const EventSchema = new mongoose.Schema({
     name: String,
     date: Date,
-    location: String
+    location: String,
+    eventId: mongoose.Types.ObjectId
 })
 
 const EventCollection = mongoose.model('EventSchema', EventSchema)
 
 const getAllEvent = () => {
     return EventCollection.find({})
+}
+
+const getAllEventByType = (eventId) => {
+    return EventCollection.find({eventId: eventId})
 }
 
 const getSingleEvent = (id) => {
@@ -30,6 +35,7 @@ const deleteEvent = (id) => {
 
 module.exports = {
     getAllEvent,
+    getAllEventByType,
     getSingleEvent,
     createEvent,
     updateEvent,
