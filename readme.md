@@ -1,6 +1,11 @@
 # CARFECTION Project 2
 
-Heroku: <a href="https://tranquil-inlet-04681.herokuapp.com/type">carfection app</a>
+## Overview
+An app that allows the user to add multiple categories of vehicles.  Within each category, user can add that vehicle type and also add events that will showcase these type of vehicles.  User have access to edit or delete each vehicles and events.
+
+
+Heroku: <a href="https://tranquil-inlet-04681.herokuapp.com/type">Carfection App</a>
+GitHub: <a href="https://git.generalassemb.ly/vithusan/SEI24-PROJECT2/projects/1">Project Board</a>
 
 ## Technology Used
 - Javascript
@@ -18,7 +23,3 @@ Heroku: <a href="https://tranquil-inlet-04681.herokuapp.com/type">carfection app
 !['Wireframe 2'](/img/wireframe2.jpg)
 !['Wireframe 3'](/img/wireframe3.jpg)
 !['Wireframe 4'](/img/wireframe4.jpg)
-
-
-Director is type 
-movie is cars and events
