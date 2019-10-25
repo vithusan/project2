@@ -5,7 +5,7 @@
 
     {{!-- <img src={{singleType.picture}} /> --}}
 
-<a href="/car/new/{{singleType._id}}">
+    <a href="/car/new/{{singleType._id}}">
         <button class="allBtns">
             Add Car
         </button>
@@ -18,7 +18,7 @@
         {{/each}}
     </div>
 
-<a href="/car/new/{{singleType._id}}">
+    <a href="/event/new/{{singleType._id}}">
         <button class="allBtns">
             Add Event
         </button>
@@ -32,15 +32,15 @@
     </div>
 
 
-    
+
 
     {{!-- <button class="allBtns"><a href="/type/edit/{{singleType._id}}">Update</a></button> --}}
-{{!-- 
-    <form action="/type/{{singleType._id}}?_method=DELETE" method="POST">
-        <input type="submit" value="Delete" class="allBtns"/>
-    </form> --}}
+    
+    <form action="/type/{{singleType._id}}?_method=DELETE" method="POST" class="deleteForm">
+        <input type="submit" value="Delete" class="deleteBtn"/>
+    </form>
 
 
-    <button class="allBtns"><a href="/type">Back</a></button>
+    <button class="homeBtn"><a href="/type">Back</a></button>
 
 </div>

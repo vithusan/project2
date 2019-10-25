@@ -1,15 +1,26 @@
 <h1>{{singleCar.make}}</h1>
 
-<p>{{singleCar.model}}</p>
-<p>{{singleCar.year}}</p>
-<p>{{singleCar.type}}</p>
-<p>{{singleCar.transmission}}</p>
-<p>{{singleCar.description}}</p>
+<div class="singleImg">
+    {{#if singleCar.carPicture}}
+    <img src="{{singleCar.carPicture}}" />
+    {{/if}}
+</div>
 
-<button class="allBtns"><a href="/car/edit/{{singleCar._id}}">Update</a></button>
 
-<form action="/car/{{singleCar._id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete" class="allBtns"/>
-</form>
+<div class="midContainer">
+    <p>Model: {{singleCar.model}}</p>
+    <p>Year: {{singleCar.year}}</p>
+    <p>Transmission: {{singleCar.transmission}}</p>
+    <p>{{singleCar.description}}</p>
+</div>
 
-<button class="allBtns"><a href="/type">Back</a></button>
+<div class="deleteUpdateDiv">
+    <button class="allBtns"><a href="/car/edit/{{singleCar._id}}">Update</a></button>
+
+    <form action="/car/{{singleCar._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" class="allBtns" />
+    </form>
+</div>
+
+
+<button class="backCarP"><a href="/type/{{singleCar.typeId}}">Back</a></button>

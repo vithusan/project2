@@ -1,9 +1,10 @@
 <h1>{{updateSingleEvent.name}}</h1>
 
-<form action="/event/{{updateSingleEvent._id}}?_method=PUT" method="POST">
-    <input type="text" placeholder="Name" name="name" value="{{updateSingleEvent.name}}"/>
-    <input type="Date" placeholder="Date" name="date" value="{{updateSingleEvent.date}}"/>
-    <input type="text" placeholder="Location" name="location" value="{{updateSingleEvent.location}}"/>
+<form action="/event/{{updateSingleEvent._id}}?_method=PUT" method="POST" class="allForms">
+    <input type="text" class="inputTxtBox" placeholder="Name" name="name" value="{{updateSingleEvent.name}}"/>
+    <input type="date" class="inputTxtBox" name="date" value="{{updateSingleEvent.date}}"/>
+    <input type="text" class="inputTxtBox" placeholder="Location" name="location" value="{{updateSingleEvent.location}}"/>
+    <input type="text" class="inputTxtBox" placeholder="Image URL" name="eventPicture" value="{{updateSingleEvent.eventPicture}}"/>
     <input type="submit" value="Save" class="allBtns"/>
 </form>
 

@@ -1,10 +1,12 @@
 <h1>Add Event</h1>
 
-<form action="/event" method="POST">
-    <input type="text" placeholder="Name" name="name"/>
-    <input type="Date" placeholder="Date" name="date"/>
-    <input type="text" placeholder="Location" name="location"/>
+<form action="/event" method="POST" class="allForms">
+    <input class="inputTxtBox" type="text" placeholder="Name" name="name"/>
+    <input class="inputTxtBox" type="Date" name="date"/>
+    <input class="inputTxtBox" type="text" placeholder="Location" name="location"/>
+    <input type="text" class="inputTxtBox" placeholder="Image URL" name="eventPicture"/>
+    <input class="inputTxtBox" type="hidden" name="eventId" value="{{eventId}}"/>
     <input type="submit" value="Add" class="allBtns"/>
 </form>
 
-<button class="allBtns"><a href="/event">Home</a></button>
+<button class="allBtns"><a href="/type/{{eventId}}">Back</a></button>

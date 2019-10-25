@@ -1,12 +1,24 @@
 <h1>{{singleEvent.name}}</h1>
 
-<p>{{singleEvent.date}}</p>
-<p>{{singleEvent.location}}</p>
+<div class="singleImg">
+    {{#if singleEvent.eventPicture}}
+    <img src="{{singleEvent.eventPicture}}" />
+    {{/if}}
+</div>
 
-<button class="allBtns"><a href="/event/edit/{{singleEvent._id}}">Update</a></button>
+<div class="midContainer">
+    <p>Date: {{singleEvent.date}}</p>
+    <p>Location: {{singleEvent.location}}</p>
+</div>
 
-<form action="/event/{{singleEvent._id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete" class="allBtns"/>
-</form>
 
-<button class="allBtns"><a href="/event">Home</a></button>
+
+<div class="deleteUpdateDiv">
+    <button class="allBtns"><a href="/event/edit/{{singleEvent._id}}">Update</a></button>
+
+    <form action="/event/{{singleEvent._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" class="allBtns" />
+    </form>
+</div>
+
+<button class="backCarP"><a href="/type/{{singleEvent.eventId}}">Back</a></button>

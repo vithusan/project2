@@ -1,17 +1,74 @@
 <h1>Add New Car</h1>
 
-<form action="/car" method="POST">
-    <input type="text" placeholder="Make" name="make"/>
-    <input type="text" placeholder="model" name="model"/>
-    <input type="Number" placeholder="Year" name="year"/>
-    {{!-- <input type="text" placeholder="Transmission" name="transmission"/> --}}
-    <select name="transmission">
-  <option value="Automatic">Automatic</option>
-  <option value="Manual">Manual</option>
-</select>
-    <input type="text" placeholder="Description" name="description"/>
-    <input type="hidden" name="typeId" value="{{typeId}}" />
-    <input type="submit" value="Add" class="allBtns"/>
+<form action="/car" method="POST" class="allForms">
+  {{!-- <input type="text" class="inputTxtBox" placeholder="Make" name="make" /> --}}
+  <select name="make" class="inputTxtBox">
+    <option value="Make">Make</option>
+    <option value="Rolls-Royce">Rolls-Royce</option>
+    <option value="Bentley">Bentley</option>
+    <option value="Mclaren">Mclaren</option>
+    <option value="Koenigsegg">Koenigsegg</option>
+    <option value="Porsche">Porsche</option>
+    <option value="Lamborghini">Lamborghini</option>
+    <option value="Mercedes">Mercedes</option>
+    <option value="Land Rover">Land Rover</option>
+    <option value="Jeep">Jeep</option>
+  </select>
+  {{!-- <input type="text" class="inputTxtBox" placeholder="model" name="model" /> --}}
+  <select name="model" class="inputTxtBox">
+    <option value="Model">Model</option>
+    <option value="Phantom">Phantom</option>
+    <option value="Wraith">Wraith</option>
+    <option value="Mulsanne">Mulsanne</option>
+    <option value="Continental GT">Continental GT</option>
+    <option value="Senna">Senna</option>
+    <option value="P1">P1</option>
+    <option value="Jesko">Jesko</option>
+    <option value="Regera">Regera</option>
+    <option value="911 GT2 RS">911 GT2 RS</option>
+    <option value="911 GT3 RS">911 GT3 RS</option>
+    <option value="Huracan">Huracan</option>
+    <option value="Aventador">Aventador</option>
+    <option value="4x4 Squared">4x4 Squared</option>
+    <option value="G63 6x6 ">G63 6x6</option>
+    <option value="Defender">Defender</option>
+    <option value="Wrangler">Wrangler</option>
+  </select>
+  {{!-- <input type="Number" class="inputTxtBox" placeholder="Year" name="year" /> --}}
+  <select name="year" class="inputTxtBox">
+    <option value="Year">Year</option>
+    <option value="2000">2000</option>
+    <option value="2000">2001</option>
+    <option value="2000">2002</option>
+    <option value="2000">2003</option>
+    <option value="2000">2004</option>
+    <option value="2000">2005</option>
+    <option value="2000">2006</option>
+    <option value="2000">2007</option>
+    <option value="2000">2008</option>
+    <option value="2000">2009</option>
+    <option value="2000">2010</option>
+    <option value="2000">2011</option>
+    <option value="2000">2012</option>
+    <option value="2000">2013</option>
+    <option value="2000">2014</option>
+    <option value="2000">2015</option>
+    <option value="2000">2016</option>
+    <option value="2000">2017</option>
+    <option value="2000">2018</option>
+    <option value="2000">2019</option>
+    <option value="2000">2020</option>
+  </select>
+  {{!-- <input type="text" placeholder="Transmission" name="transmission"/> --}}
+  <select name="transmission" class="inputTxtBox">
+    <option value="Transmission">Transmission</option>
+    <option value="Automatic">Automatic</option>
+    <option value="Manual">Manual</option>
+  </select>
+  <input type="text" class="inputTxtBox" placeholder="Image URL" name="carPicture"/>
+  <input type="text" class="inputTxtBox" placeholder="Description" name="description" />
+  <input type="hidden" name="typeId" value="{{typeId}}" />
+  <input type="submit" value="Add" class="allBtns" />
 </form>
 
-<button class="allBtns"><a href="/car">Home</a></button>
+<button class="allBtns"><a href="/type/{{typeId}}">Back</a></button>

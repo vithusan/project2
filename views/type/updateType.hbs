@@ -1,9 +1,9 @@
 <h1>{{updatedType.name}}</h1>
 
-<form action="/type/{{updatedType._id}}?_method=PUT" method="POST">
-    <input type="text" placeholder="Name" name="name" value="{{updatedType.name}}"/>
-    <input type="text" placeholder="Description" name="description" value="{{updatedType.description}}"/>
-    <input type="text" placeholder="URL Of Image" name="picture" value="{{updatedType.picture}}"/>
+<form action="/type/{{updatedType._id}}?_method=PUT" method="POST" class="allForms">
+    <input type="text" class="inputTxtBox" placeholder="Name" name="name" value="{{updatedType.name}}"/>
+    <input type="text" class="inputTxtBox" placeholder="Description" name="description" value="{{updatedType.description}}"/>
+    <input type="text" class="inputTxtBox" placeholder="URL Of Image" name="picture" value="{{updatedType.picture}}"/>
     <input type="submit" value="Save" class="allBtns"/>
 </form>
 
