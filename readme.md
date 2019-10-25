@@ -23,3 +23,9 @@ GitHub: <a href="https://git.generalassemb.ly/vithusan/SEI24-PROJECT2/projects/1
 !['Wireframe 2'](/img/wireframe2.jpg)
 !['Wireframe 3'](/img/wireframe3.jpg)
 !['Wireframe 4'](/img/wireframe4.jpg)
+
+
+## Future Development
+- Optimize all the dropdown list with backend
+- Add google map api for the location
+- Alter the css for responsive design
