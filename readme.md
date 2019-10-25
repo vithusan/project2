@@ -1,4 +1,16 @@
-# SEI24-PROJECT2
+# CARFECTION Project 2
+
+Heroku: <a href="https://tranquil-inlet-04681.herokuapp.com/type">carfection app</a>
+
+## Technology Used
+- Javascript
+- CSS
+- NodeJS
+- Express
+- Handlebars
+- MongoDB
+
+## ERD Diagram
 !['ERD Diagram'](/img/erd_diagram.jpg)
 
 ## Wireframe
