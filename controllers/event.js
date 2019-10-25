@@ -6,8 +6,8 @@ eventRouter.get('/event/new', (req, res) => {
     res.render('event/createEvent')
 })
 
-eventRouter.get('/eevnt/new/:eventId', (req, res) => {
-    res.render('/event/createEvent', {eventId: req.params.eventId})
+eventRouter.get('/event/new/:eventId', (req, res) => {
+    res.render('event/createEvent', {eventId: req.params.eventId})
 })
 eventRouter.get('/event/edit/:id', (req, res) =>{
     eventApi.getSingleEvent(req.params.id)
@@ -36,7 +36,7 @@ eventRouter.post('/event', (req, res) => {
     eventApi.createEvent(req.body)
     .then((createdEvent) => {
         // res.json(createdEvent)
-        res.redirect(`/event/${req.params.eventId}`)
+        res.redirect(`/type/${req.body.eventId}`)
     })
 })
 
@@ -52,7 +52,7 @@ eventRouter.delete('/event/:id', (req, res) => {
     eventApi.deleteEvent(req.params.id)
     .then((deletedEvent) => {
         // res.json(deletedEvent)
-        res.redirect('/event')
+        res.redirect('/type')
     })
 })
 

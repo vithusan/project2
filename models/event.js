@@ -4,6 +4,7 @@ const EventSchema = new mongoose.Schema({
     name: String,
     date: Date,
     location: String,
+    eventPicture: String,
     eventId: mongoose.Types.ObjectId
 })
 
